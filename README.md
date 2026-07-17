@@ -53,6 +53,23 @@ The demos support using OpenAI models instead of running models locally with Doc
 | [Langchaingo](https://github.com/tmc/langchaingo) DuckDuckGo Search | Single Agent | gemma3 | duckduckgo | [./langchaingo](./langchaingo) | [compose.yaml](./langchaingo/compose.yaml) |
 | [MinionS](https://github.com/HazyResearch/minions) Cost-Efficient Local-Remote Collaboration | Local-Remote Protocol | qwen3(local), gpt-4o(remote) |  | [./minions](./minions) | [docker-compose.minions.yml](https://github.com/HazyResearch/minions/blob/main/apps/minions-docker/docker-compose.minions.yml) |
 
+## MeetCombo operations
+
+For the MeetCombo Foundation automation work, the repository now includes:
+
+- [compose.n8n.yaml](./compose.n8n.yaml) to run a local n8n instance.
+- [docs/meetcombo-ops.md](./docs/meetcombo-ops.md) for the operational workflow.
+- [docs/meetcombo-handoff.md](./docs/meetcombo-handoff.md) for the handoff notes.
+- [docs/meetcombo-task-list.md](./docs/meetcombo-task-list.md) for the active task list.
+
+To start n8n locally:
+
+```sh
+docker compose -f compose.n8n.yaml up -d
+```
+
+Then open http://localhost:5678.
+
 ## License
 
 This repository is **dual-licensed** under the Apache License 2.0 or the MIT
